@@ -25,10 +25,6 @@ public class ConfigManager : SingleTonManager<ConfigManager>, IManager
     private CfgServantVoiceData cfgServantVoiceData;
     public CfgServantVoiceData getCfgServantVoiceData()
     {
-        if (cfgServantVoiceData == null)
-        {
-            
-        }
         return cfgServantVoiceData;
     }
 }

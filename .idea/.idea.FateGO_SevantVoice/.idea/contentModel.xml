@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets/Scripts" t="Include">
+        <e p="CfgObject" t="Include">
+          <e p="CfgServantVoice.cs" t="Include" />
+          <e p="CfgServantVoiceData.cs" t="Include" />
+        </e>
+        <e p="Global.cs" t="Include" />
+        <e p="Main.cs" t="Include" />
+        <e p="Modules" t="Include">
+          <e p="Audio" t="Include">
+            <e p="AudioManager.cs" t="Include" />
+            <e p="AudioPlayer.cs" t="Include" />
+          </e>
+          <e p="Config" t="Include">
+            <e p="ConfigManager.cs" t="Include" />
+          </e>
+          <e p="Resource" t="Include">
+            <e p="ResourceManager.cs" t="Include" />
+          </e>
+          <e p="ServantVoice" t="Include">
+            <e p="DlgShop.cs" t="Include" />
+            <e p="ServantVoice.cs" t="Include" />
+            <e p="ServantVoiceData.cs" t="Include" />
+            <e p="ServantVoiceManager.cs" t="Include" />
+          </e>
+          <e p="UI" t="Include">
+            <e p="UIComponent" t="Include">
+              <e p="UIItem.cs" t="Include" />
+              <e p="UIList.cs" t="Include" />
+            </e>
+            <e p="UIManager.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Share" t="Include">
+          <e p="CommonEnum.cs" t="Include" />
+          <e p="IManager.cs" t="Include" />
+          <e p="SingleTon.cs" t="Include" />
+          <e p="SingleTonManager.cs" t="Include" />
+          <e p="SingleTonMonobehavior.cs" t="Include" />
+        </e>
+      </e>
+      <e p="FateGO_SevantVoice.sln" t="IncludeFlat" />
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2018.1/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_FateGO_SevantVoice.-2119117065.00" t="ExcludeRecursive" />
+  </component>
+</project>

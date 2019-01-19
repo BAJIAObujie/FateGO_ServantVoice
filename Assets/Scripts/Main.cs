@@ -26,7 +26,6 @@ public class Main : MonoBehaviour {
 	
 	private void setUILeft()
 	{
-		GameObject uiDialogShop = UIManager.getInstace().ShowUI("DlgShop");
-		uiDialogShop.GetComponent<DlgShop>().init();
+		
 	}
 }

@@ -11,10 +11,14 @@ using UnityEngine.UI;
 public class UIManager : SingleTonManager<UIManager>, IManager
 {
 	private static GameObject UIRoot;
-	
+	private static Stack<GameObject> UIStack;
+	private static GameObject currentDialog;
 	public void Init()
 	{
 		UIRoot = GameObject.Find("Canvas");
+		UIStack = new Stack<GameObject>();
+		ShowDialog("DlgSelect");
+		//UIStack.Push();
 	}
 	/* ------- 唯一数据 ------- */
 
@@ -23,16 +27,37 @@ public class UIManager : SingleTonManager<UIManager>, IManager
 		return UIRoot;
 	}
 	
-	public GameObject ShowUI(string uiName)
+	public GameObject ShowDialog(string uiName)
 	{
+		if (currentDialog != null)
+		{
+			currentDialog.SetActive(false);
+			UIStack.Push(currentDialog);
+		}
 		Transform findObj = UIRoot.transform.Find(uiName);
 		if (findObj != null)
 		{
-			return findObj.gameObject;
+			findObj.gameObject.SetActive(true);
+			currentDialog = findObj.gameObject;
+			return currentDialog;
 		}
 		GameObject prefab = ResourceManager.getInstace().getUI(uiName);
-		return Instantiate(prefab,UIRoot.transform);
+		currentDialog = Instantiate(prefab, UIRoot.transform);
+		return currentDialog;
 	}
 
+	public void HideCurrentDialog()
+	{
+		if (currentDialog != null && currentDialog.activeSelf)
+		{
+			currentDialog.SetActive(false);
+		}
+
+		if (UIStack.Count != 0)
+		{
+			currentDialog = UIStack.Pop();
+			currentDialog.SetActive(true);
+		}
+	}
 	
 }

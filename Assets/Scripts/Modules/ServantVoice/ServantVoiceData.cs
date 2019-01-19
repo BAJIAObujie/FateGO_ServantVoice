@@ -1,45 +1,38 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ServantVoiceData{
-    private List<ServantVoice> allVoice = new List<ServantVoice>();
-    private Dictionary<int, List<ServantVoice>> typeToVoices;
-    public ServantVoiceData()
+public class ServantVoiceData
+{
+    public List<ServantVoice> listVoices = new List<ServantVoice>();
+    public ServantVoiceData(string ServantEName)
     {
         CfgServantVoiceData cfg = ConfigManager.getInstace().getCfgServantVoiceData();
-        foreach (CfgServantVoice voice in cfg.voices)
+        foreach (CfgServantVoice cfgServantVoice in cfg.voices)
         {
-            allVoice.Add(new ServantVoice(voice));
-        }
-        typeToVoices = new Dictionary<int, List<ServantVoice>>();
-        foreach (int type in Enum.GetValues(typeof(CommonEnum.VoiceType)))
-        {
-            typeToVoices[type] = new List<ServantVoice>();
-        }
-        foreach (var voice in allVoice)
-        {
-            int type = voice.getVoiceType();
-            typeToVoices[type].Add(voice);
+            if (cfgServantVoice.servantEName == ServantEName)
+            {
+                ServantVoice data = new ServantVoice(cfgServantVoice);
+                listVoices.Add(data);
+            }
         }
     }
 
     public List<ServantVoice> getServantVoice()
     {
-        return allVoice;
+        return listVoices;
     }
-
+    
     public List<ServantVoice> getVoicesByType(int type)
     {
-        List<ServantVoice> ret;
-        if (typeToVoices.TryGetValue(type, out ret))
+        List<ServantVoice> ret = new List<ServantVoice>();
+        foreach (var voice in listVoices)
         {
-            return ret;
+            if (voice.getVoiceType() == type)
+            {
+                ret.Add(voice);
+            }
         }
-        return null;
+        return ret;
     }
-
-    
-
 }

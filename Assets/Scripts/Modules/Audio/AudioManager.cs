@@ -14,7 +14,7 @@ public class AudioManager : SingleTonManager<AudioManager> ,IManager
 	public void Init()
 	{
 		GameObject camera = GameObject.Find("Main Camera");
-		AudioPlayer audioPlayer = camera.AddComponent<AudioPlayer>();
+		audioPlayer = camera.AddComponent<AudioPlayer>();
 		AudioSource audioSource = camera.GetComponent<AudioSource>();
 		audioPlayer.setAudioSource(audioSource);
 	}
@@ -24,10 +24,10 @@ public class AudioManager : SingleTonManager<AudioManager> ,IManager
 		return GameObject.Find("Main Camera").GetComponent<AudioPlayer>();
 	}
 	
-	public AudioPlayer Play2DSound(int voiceId,Action onStart = null, Action onEnd = null)
+	public AudioPlayer Play2DSound(string servantEName, string voiceId,Action onStart = null, Action onEnd = null)
 	{
 		//var clip = Resources.Load<AudioClip>(voicePath);
-		AudioClip audioClip = ResourceManager.getInstace().getAudioClip(voiceId);
+		AudioClip audioClip = ResourceManager.getInstace().getServantVoice(servantEName,voiceId);
 		audioPlayer = getAudioPlayer();
 		if (audioPlayer == null)
 		{
