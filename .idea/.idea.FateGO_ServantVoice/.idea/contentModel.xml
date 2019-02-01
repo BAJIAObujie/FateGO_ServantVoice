@@ -8,6 +8,9 @@
           <e p="CfgServantVoice.cs" t="Include" />
           <e p="CfgServantVoiceData.cs" t="Include" />
         </e>
+        <e p="EditorUI" t="Include">
+          <e p="UISprite.cs" t="Include" />
+        </e>
         <e p="Global.cs" t="Include" />
         <e p="Main.cs" t="Include" />
         <e p="Modules" t="Include">
@@ -37,6 +40,9 @@
             </e>
             <e p="UIManager.cs" t="Include" />
           </e>
+        </e>
+        <e p="MyFunction" t="Include">
+          <e p="CreateAssetExpression.cs" t="Include" />
         </e>
         <e p="Share" t="Include">
           <e p="CommonEnum.cs" t="Include" />

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 696f5a7f314294a36ba4503c30ea1e8c, type: 3}
+  m_Name: Ereshkigal_Expression_Stage_03
+  m_EditorClassIdentifier: 
+  expression:
+  - {fileID: 21300000, guid: 3a5565bfd8ac04a9c9ec79bdc10e56c2, type: 3}
+  - {fileID: 21300002, guid: 3a5565bfd8ac04a9c9ec79bdc10e56c2, type: 3}
+  - {fileID: 21300004, guid: 3a5565bfd8ac04a9c9ec79bdc10e56c2, type: 3}
+  - {fileID: 21300006, guid: 3a5565bfd8ac04a9c9ec79bdc10e56c2, type: 3}
+  - {fileID: 21300008, guid: 3a5565bfd8ac04a9c9ec79bdc10e56c2, type: 3}
+  - {fileID: 21300000, guid: 26616decc5aef4e4f846053327e9356c, type: 3}
+  - {fileID: 21300002, guid: 26616decc5aef4e4f846053327e9356c, type: 3}
+  - {fileID: 21300004, guid: 26616decc5aef4e4f846053327e9356c, type: 3}
+  - {fileID: 21300006, guid: 26616decc5aef4e4f846053327e9356c, type: 3}
+  - {fileID: 21300008, guid: 26616decc5aef4e4f846053327e9356c, type: 3}
+  - {fileID: 21300010, guid: 26616decc5aef4e4f846053327e9356c, type: 3}
+  - {fileID: 21300012, guid: 26616decc5aef4e4f846053327e9356c, type: 3}
+  - {fileID: 21300014, guid: 26616decc5aef4e4f846053327e9356c, type: 3}
+  - {fileID: 21300016, guid: 26616decc5aef4e4f846053327e9356c, type: 3}
+  - {fileID: 21300018, guid: 26616decc5aef4e4f846053327e9356c, type: 3}
+  - {fileID: 21300020, guid: 26616decc5aef4e4f846053327e9356c, type: 3}
+  - {fileID: 21300022, guid: 26616decc5aef4e4f846053327e9356c, type: 3}
+  - {fileID: 21300024, guid: 26616decc5aef4e4f846053327e9356c, type: 3}
+  - {fileID: 21300026, guid: 26616decc5aef4e4f846053327e9356c, type: 3}
+  - {fileID: 21300028, guid: 26616decc5aef4e4f846053327e9356c, type: 3}
+  - {fileID: 21300030, guid: 26616decc5aef4e4f846053327e9356c, type: 3}
+  - {fileID: 21300000, guid: e5e8eb8da5ccd4f1cb65605ebdbb0ddf, type: 3}
+  - {fileID: 21300002, guid: e5e8eb8da5ccd4f1cb65605ebdbb0ddf, type: 3}
+  - {fileID: 21300004, guid: e5e8eb8da5ccd4f1cb65605ebdbb0ddf, type: 3}
+  - {fileID: 21300006, guid: e5e8eb8da5ccd4f1cb65605ebdbb0ddf, type: 3}
+  - {fileID: 21300008, guid: e5e8eb8da5ccd4f1cb65605ebdbb0ddf, type: 3}
+  - {fileID: 21300010, guid: e5e8eb8da5ccd4f1cb65605ebdbb0ddf, type: 3}

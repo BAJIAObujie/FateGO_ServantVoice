@@ -13,11 +13,15 @@ public class UIManager : SingleTonManager<UIManager>, IManager
 	private static GameObject UIRoot;
 	private static Stack<GameObject> UIStack;
 	private static GameObject currentDialog;
+	private static GameObject Mask;
 	public void Init()
 	{
 		UIRoot = GameObject.Find("Canvas");
 		UIStack = new Stack<GameObject>();
-		ShowDialog("DlgSelect");
+		GameObject dlg = ShowDialog("DlgSelect");
+		Mask = UIRoot.transform.Find("Mask").gameObject;
+		Mask.SetActive(false);
+		dlg.GetComponent<DlgSelect>().OnShow();
 		//UIStack.Push();
 	}
 	/* ------- 唯一数据 ------- */
@@ -25,6 +29,11 @@ public class UIManager : SingleTonManager<UIManager>, IManager
 	public GameObject getUIRoot()
 	{
 		return UIRoot;
+	}
+
+	public void SetBCanInteract(bool flag)
+	{
+		Mask.SetActive(!flag);
 	}
 	
 	public GameObject ShowDialog(string uiName)
@@ -46,18 +55,24 @@ public class UIManager : SingleTonManager<UIManager>, IManager
 		return currentDialog;
 	}
 
+//	public void showbefore()
+//	{
+//		currentDialog = UIStack.Pop();
+//		currentDialog.SetActive(true);
+//	}
+
 	public void HideCurrentDialog()
 	{
 		if (currentDialog != null && currentDialog.activeSelf)
 		{
 			currentDialog.SetActive(false);
 		}
-
 		if (UIStack.Count != 0)
 		{
 			currentDialog = UIStack.Pop();
 			currentDialog.SetActive(true);
 		}
 	}
+	
 	
 }

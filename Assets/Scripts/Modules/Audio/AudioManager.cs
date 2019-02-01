@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class AudioManager : SingleTonManager<AudioManager> ,IManager
 {
-	public AudioPlayer audioPlayer;
+	private AudioPlayer audioPlayer;
 
 	//不能在这里使用new 创建monobehavior必须在
 	//You are trying to create a MonoBehaviour using the 'new' keyword.
@@ -18,17 +18,11 @@ public class AudioManager : SingleTonManager<AudioManager> ,IManager
 		AudioSource audioSource = camera.GetComponent<AudioSource>();
 		audioPlayer.setAudioSource(audioSource);
 	}
-
-	private AudioPlayer getAudioPlayer()
-	{
-		return GameObject.Find("Main Camera").GetComponent<AudioPlayer>();
-	}
 	
 	public AudioPlayer Play2DSound(string servantEName, string voiceId,Action onStart = null, Action onEnd = null)
 	{
 		//var clip = Resources.Load<AudioClip>(voicePath);
 		AudioClip audioClip = ResourceManager.getInstace().getServantVoice(servantEName,voiceId);
-		audioPlayer = getAudioPlayer();
 		if (audioPlayer == null)
 		{
 			Debug.Log("audioPlayer == null");

@@ -2,11 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ResourceManager : SingleTonManager<ResourceManager>, IManager{
-    
+public class ResourceManager : SingleTonManager<ResourceManager>, IManager
+{
+
+	public static Sprite transparentPNG;
+	
 	public void Init()
 	{
-		
+		transparentPNG = Resources.Load<Sprite>("Sprites/TransparentPNG");
+		Debug.Log(transparentPNG);
 	}
 	
 	/* ------- 唯一数据 ------- */
@@ -65,6 +69,12 @@ public class ResourceManager : SingleTonManager<ResourceManager>, IManager{
 			Debug.Log(string.Format("ServantExpression sprite {0} not exist",path));
 		}
 		return ret;
+	}
+
+	public CreateAssetExpression getAssetExpression(string servantEName, string fileName)
+	{
+		string path = string.Format("ServantData/{0}/ExpressionData/{1}{2}", servantEName, servantEName, fileName); 
+		return Resources.Load<CreateAssetExpression>(path);
 	}
 	
 }

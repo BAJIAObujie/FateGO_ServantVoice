@@ -21,13 +21,15 @@ public class Global : MonoBehaviour
 		Instace = go.AddComponent<Global>();
 
 		//Init Managers
+		//uimanager always is the last one
 		managers = new List<IManager>();
 		managers.Add(AudioManager.getInstace());
 		managers.Add(ResourceManager.getInstace());
 		managers.Add(ConfigManager.getInstace());
-		managers.Add(UIManager.getInstace());
 		
 		managers.Add(ServantManager.getInstace());
+		
+		managers.Add(UIManager.getInstace());
 		foreach (var manager in managers)
 		{
 			manager.Init();

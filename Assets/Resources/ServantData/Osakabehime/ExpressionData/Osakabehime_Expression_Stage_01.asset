@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 696f5a7f314294a36ba4503c30ea1e8c, type: 3}
+  m_Name: Osakabehime_Expression_Stage_01
+  m_EditorClassIdentifier: 
+  expression:
+  - {fileID: 21300000, guid: e3400d14f1ff9486bb13ce38150ffaae, type: 3}
+  - {fileID: 21300002, guid: e3400d14f1ff9486bb13ce38150ffaae, type: 3}
+  - {fileID: 21300004, guid: e3400d14f1ff9486bb13ce38150ffaae, type: 3}
+  - {fileID: 21300006, guid: e3400d14f1ff9486bb13ce38150ffaae, type: 3}
+  - {fileID: 21300008, guid: e3400d14f1ff9486bb13ce38150ffaae, type: 3}
+  - {fileID: 21300000, guid: 4bc0d2f176cdf4116b98517365da6a7d, type: 3}
+  - {fileID: 21300002, guid: 4bc0d2f176cdf4116b98517365da6a7d, type: 3}
+  - {fileID: 21300004, guid: 4bc0d2f176cdf4116b98517365da6a7d, type: 3}
+  - {fileID: 21300006, guid: 4bc0d2f176cdf4116b98517365da6a7d, type: 3}
+  - {fileID: 21300008, guid: 4bc0d2f176cdf4116b98517365da6a7d, type: 3}

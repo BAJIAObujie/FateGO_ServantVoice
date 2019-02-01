@@ -7,12 +7,10 @@ public class CfgServantVoice
 {
    public string servantName;
    public string servantEName;
-   public int servantId;
    public string voiceId;
    public string voiceTitle;
    public string voiceContent;
    public int voiceType;
-   public string defaultExpression;
    public float time1;
    public string expression1;
    public float time2;
